@@ -1,0 +1,132 @@
+body {
+    &.dark-mode {
+        background: $dm-dark;
+        color: $dm-light;
+
+        &::selection { background: $dm-grey; }
+
+        a {
+            color: $dm-light;
+
+            &:hover {
+                color: $dm-red;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $dm-light;
+        }
+
+        select:focus,
+        textarea:focus {
+            border-color: $dm-red;
+        }
+
+        input {
+            &[type='email']:focus,
+            &[type='number']:focus,
+            &[type='password']:focus,
+            &[type='search']:focus,
+            &[type='tel']:focus,
+            &[type='text']:focus,
+            &[type='url']:focus {
+                border-color: $dm-red;
+            }
+        }
+
+        blockquote {
+            color: $dm-grey;
+
+            &::before {
+                color: $dm-light;
+            }
+        }
+
+        hr {
+            border-color: $dm-grey;
+        }
+
+        nav {
+            &.header-navigation,
+            &.footer-navigation {
+                border-color: $dm-grey;
+
+                ul {
+                    li {
+                        &.nav-current {
+                            a {
+                                color: $dm-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        main {
+            article {
+                .entry-author {
+                    &::after {
+                        background-color: $dm-grey;
+                    }
+                }
+            }
+
+            .posts {
+                article {
+                    &.featured-post {
+                        border-color: $dm-grey;
+                    }
+                }
+            }
+
+            .post-wrapper {
+                .post-extra {
+                    .post-tags {
+                        color: $dm-grey;
+                    }
+
+                    .post-share {
+                        a {
+                            color: $dm-grey;
+                        }
+                    }
+                }
+
+                .sidebar {
+                    .widget {
+                        li {
+                            border-color: $dm-grey;
+                        }
+
+                        &.share {
+                            background: $dm-dark;
+                        }
+                    }
+                }
+            }
+
+            .post-spacer {
+                border-color: $dm-grey;
+            }
+        }
+
+        footer {
+            .subscribe-form,
+            .copyright {
+                border-color: $dm-grey;
+            }
+        }
+
+        .kg-bookmark-card {
+            .kg-bookmark-container {
+                border-color: $dm-grey;
+            }
+        }
+    }
+}

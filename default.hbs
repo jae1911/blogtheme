@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>{{#unless post}}{{#if message}}{{message}} | {{@site.title}}{{/if}}{{meta_title}} |
+      {{@site.description}}{{else}}{{meta_title}} | {{@site.title}}{{/unless}}</title>
+
+    {{> "meta"}}
+
+    {{> "fonts"}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/vendor.css"}}" media="all" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/index.css"}}" media="all" />
+
+    {{!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --}}
+    <!--[if lt IE 9]>
+    <script rel="dns-prefetch" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script rel="dns-prefetch" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {{ghost_head}}
+  </head>
+
+  <body class="{{body_class}}">
+    <div id="content-wrapper" class="container">
+      {{> "header"}}
+      <main role="main">
+        {{{body}}}
+      </main>
+      {{> "footer"}}
+    </div>
+    {{#if "page"}}
+    <script src="{{asset "js/index.js"}}"></script>
+    <script rel="dns-prefetch" src="//cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Playfair Display']
+            }
+        });
+    </script>
+    {{/if}}
+    {{ghost_foot}}
+  </body>
+
+</html>

@@ -1,0 +1,129 @@
+//media queries
+@media all and (max-width: 480px) {
+    .row-flex {
+        flex-direction: column;
+    }
+
+    .site-header {
+        margin: 10rem 0 6rem;
+    }
+
+    main {
+        .post-wrapper {
+            .post-extra {
+                .post-share {
+                    text-align: center;
+                }
+            }
+
+            .author-meta {
+                text-align: center;
+            }
+
+            .sidebar {
+                margin-top: 3rem;
+            }
+        }
+
+        .post-full-content {
+            margin-top: 3rem;
+        }
+
+        .author-meta {
+            .author-image {
+                margin-right: 0;
+            }
+        }
+    }
+
+    footer {
+        .subscribe {
+            text-align: center;
+
+            .text-right {
+                text-align: center;
+            }
+        }
+
+        form {
+            margin-left: 0;
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px) {
+    main {
+        .post-wrapper {
+            .sidebar {
+                .widget {
+                    .post-tags {
+                        ul {
+                            grid-template-columns: 1fr 1fr;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    blockquote {
+        padding-left: 6rem;
+
+        &::before {
+            content: '“';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: $dark;
+            font-family: $font-0;
+            font-size: 6rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: .8;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    blockquote {
+        padding-right: 2rem;
+        padding-left: 8.6rem;
+
+        &::before {
+            font-size: 8rem;
+        }
+    }
+}
+
+@media (min-width: 40rem) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 4.4rem;
+    }
+
+    h3 {
+        font-size: 3.6rem;
+    }
+
+    h4 {
+        font-size: 3.2rem;
+    }
+
+    h5 {
+        font-size: 2.6rem;
+    }
+
+    h6 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,374 @@
+//layout
+.container {
+    max-width: 1024px;
+}
+
+header {
+    &.site-header {
+        margin: 6rem 0 7rem;
+    }
+
+    .title {
+        margin: 0;
+        line-height: 1;
+    }
+
+    .logo-link {
+        img {
+            max-height: 60px;
+        }
+    }
+
+    nav {
+        &.header-navigation {
+            margin: 10rem 0;
+        }
+    }
+}
+
+nav {
+    &.header-navigation,
+    &.footer-navigation {
+        border-top: 1px solid $light;
+        border-bottom: 1px solid $light;
+        margin: 0 0 10rem;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                margin-bottom: 0;
+
+                &.nav-current {
+                    a {
+                        color: $red;
+                    }
+                }
+
+                a {
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    font-weight: 400;
+                    letter-spacing: .2rem;
+                    margin: 0 20px;
+                    line-height: 6.5rem;
+                }
+            }
+        }
+    }
+}
+
+main {
+    article {
+        .entry-author,
+        .entry-tags {
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+
+        .entry-author {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -.6rem;
+                left: 0;
+                width: 2rem;
+                height: .2rem;
+                background-color: $dark;
+            }
+        }
+
+        .entry-date,
+        .entry-reading-time {
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+    }
+
+    .posts {
+        article {
+            margin-bottom: 10rem;
+
+            &.featured-post {
+                border-bottom: 1px solid $light;
+                padding-bottom: 5rem;
+            }
+
+            .continue-reading {
+                text-decoration: underline;
+            }
+
+            header {
+                margin: 0;
+            }
+        }
+    }
+
+    .post-wrapper {
+        header {
+            margin-bottom: 2rem;
+        }
+
+        .post-media {
+            margin-bottom: 2rem;
+
+            > img {
+                object-fit: cover;
+                max-width: 100%;
+            }
+        }
+
+        .post-meta {
+            margin-bottom: 3rem;
+        }
+
+        .post-full-content {
+            a {
+                text-decoration: underline;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+
+            ul {
+                list-style-type: square;
+            }
+
+            ul,
+            ol {
+                list-style-position: initial;
+                margin-left: 30px;
+                padding-left: 5px;
+                margin-bottom: 2.5rem;
+            }
+
+            code {
+                overflow: auto;
+            }
+        }
+
+        .post-extra {
+            margin-top: 3rem;
+
+            .post-tags {
+                color: $grey;
+            }
+
+            .post-share {
+                font-size: 1.2em;
+
+                a {
+                    color: $grey;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+
+        .about-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin-top: 3rem;
+
+            a {
+                font-size: 1.7em;
+            }
+        }
+
+        aside.read-next {
+            margin-top: 3rem;
+        }
+
+        .sidebar {
+            height: 100%;
+            margin-top: 30px;
+
+            .widget {
+                margin-bottom: 4rem;
+
+                li {
+                    padding-bottom: 1rem;
+                    border-bottom: 1px dotted $grey;
+                }
+
+                &.share {
+                    position: sticky;
+                    top: -1px;
+                    background: $white;
+                    margin-left: -1px;
+                    padding-top: 15px;
+
+                    .post-share {
+                        ul {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                            border-bottom: 1px dotted $grey;
+
+                            li {
+                                text-align: center;
+                                border-bottom: 0;
+                                font-size: 1.6em;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+
+                .post-tags {
+                    ul {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        margin-right: -1rem;
+
+                        li {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .table-wrapper {
+            table {
+                tr {
+                    &:first-child {
+                        td {
+                            padding-top: 0;
+                        }
+                    }
+
+                    &:last-child {
+                        td {
+                            border: 0;
+                        }
+                    }
+
+                    td:first-child {
+                        width: 25%;
+                    }
+                }
+            }
+
+            &.speaking-list {
+                table {
+                    tr {
+                        td:first-child {
+                            width: 70%;
+                        }
+
+                        td:nth-child(2) {
+                            width: 10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .author-meta {
+        .author-image {
+            width: 14rem;
+            height: 14rem;
+            border-radius: 3px;
+        }
+
+        .author-name {
+            small {
+                font-size: 60%;
+            }
+        }
+
+        .author-info-icon {
+            width: 2rem;
+            display: inline-block;
+        }
+    }
+
+    .post-spacer {
+        display: block;
+        width: 100%;
+        height: 1rem;
+        z-index: 99;
+        border-bottom: 1px solid $light;
+
+        + .post-full-content {
+            margin-top: 20px;
+        }
+    }
+
+    .blog-navigation {
+        .pagination {
+            text-align: center;
+
+            .page-number {
+                margin: 0 2rem;
+            }
+        }
+    }
+}
+
+footer {
+    margin: 3rem 0 6rem;
+    font-style: italic;
+
+    .subscribe-form {
+        padding-top: 3rem;
+        border-top: 1px solid $light;
+        font-style: normal;
+
+        form {
+            margin-bottom: 3rem;
+
+            .button-loader {
+                display: none;
+            }
+
+            &.loading {
+                .button-content {
+                    visibility: hidden;
+                }
+
+                .button-loader {
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 1.6em;
+                }
+            }
+        }
+    }
+
+    .footer-navigation {
+        border-bottom: 0;
+        margin: 0;
+        font-style: normal;
+    }
+
+    .copyright {
+        padding-top: 3rem;
+        border-top: 1px solid $light;
+        font-size: .8em;
+
+        .action {
+            font-size: 1.6rem;
+        }
+    }
+
+    .color-switcher {
+        margin-left: 15px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,27 @@
+<header class="site-header">
+    <div class="row">
+        {{#if @site.logo}}
+        <div class="one column">
+            <a class="logo-link" title="{{@site.title}}" href="{{@site.url}}">
+                <img src="{{@site.logo}}" alt="{{@site.title}}" class="blog-logo" />
+            </a>
+        </div>
+        <div class="nine columns">
+            <h1 class="title">
+                <a href="{{@site.url}}" title="{{@site.title}}">{{@site.title}}</a>
+            </h1>
+            <h6 class="subtitle">{{@site.description}}</h6>
+        </div>
+        {{else}}
+        <div class="ten columns">
+            <h1 class="title">
+                <a href="{{@site.url}}" title="{{@site.title}}">{{@site.title}}</a>
+            </h1>
+            <h6 class="subtitle">{{@site.description}}</h6>
+        </div>
+        {{/if}}
+    </div>
+    {{#if @site.navigation}}
+        {{navigation}}
+    {{/if}}
+</header>

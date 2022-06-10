@@ -1,0 +1,103 @@
+{
+  "name": "asgar",
+  "description": "A two column, free and open source theme for Ghost",
+  "demo": "https://asgar.stefancosma.xyz",
+  "homepage": "https://github.com/stefanbc/Asgar#readme",
+  "version": "1.0.8",
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "author": {
+    "name": "Stefan Cosma",
+    "url": "https://stefancosma.xyz",
+    "email": "hello@stefancosma.xyz"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Free",
+      "Open-Source",
+      "Two-Column"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "ghost-theme",
+    "ghost-blog",
+    "ghost-cms",
+    "ghost-blog-theme",
+    "ghost-themes",
+    "minimal",
+    "ghost-theme",
+    "theme",
+    "two-column"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanbc/Asgar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stefanbc/Asgar/issues"
+  },
+  "contributors": [
+    {
+      "name": "Stefan Cosma",
+      "email": "hello@stefancosma.xyz",
+      "url": "https://stefancosma.xyz"
+    }
+  ],
+  "scripts": {
+    "clean": "rm -rf ./assets/css ./assets/fonts ./assets/js ./asgar.zip",
+    "folders": "mkdir ./assets/css ./assets/js ./assets/fonts",
+    "zip": "zip -r9 asgar.zip . -x '*source*' '*.cache*' '*.git*' '*.vscode*' '*.sass-cache*' *node_modules/\\*",
+    "validate": "gscan ./asgar.zip -z",
+    "copy-fonts": "cp -a ./node_modules/@fortawesome/fontawesome-free/webfonts/. ./source/fonts",
+    "build-vendor": "parcel build ./source/scss/vendor.scss --no-source-maps -d ./assets/css --public-url /assets/fonts/",
+    "cleanup-fonts": "rm -rf ./assets/fonts/* ./source/fonts && cp -r ./assets/css/fa-* ./assets/fonts && rm -rf ./assets/css/fa-*",
+    "css-vendor": "yarn copy-fonts && yarn build-vendor && yarn cleanup-fonts",
+    "css-index": "parcel build ./source/scss/index.scss --no-source-maps -d ./assets/css",
+    "js": "parcel build ./source/js/index.js --no-source-maps -d ./assets/js",
+    "prod": "yarn clean && yarn folders && yarn css-vendor && yarn css-index && yarn js",
+    "deploy": "yarn prod && yarn zip && yarn validate"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "normalize.css": "^8.0.1",
+    "skeleton.css": "^2.0.4"
+  },
+  "devDependencies": {
+    "gscan": "^4.6.0",
+    "parcel": "^1.12.4",
+    "sass": "^1.43.2"
+  },
+  "config": {
+    "posts_per_page": 5,
+    "image_sizes": {
+      "xxs": {
+        "width": 30
+      },
+      "xs": {
+        "width": 100
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 600
+      },
+      "l": {
+        "width": 1000
+      },
+      "xl": {
+        "width": 2000
+      }
+    }
+  }
+}
