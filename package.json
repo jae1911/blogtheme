@@ -56,7 +56,7 @@
   "scripts": {
     "clean": "rm -rf ./assets/css ./assets/fonts ./assets/js ./asgar.zip",
     "folders": "mkdir ./assets/css ./assets/js ./assets/fonts",
-    "zip": "zip -r9 asgar.zip . -x '*source*' '*.cache*' '*.git*' '*.vscode*' '*.sass-cache*' *node_modules/\\*",
+    "zip": "zip -r9 blogtheme.zip . -x '*source*' '*.cache*' '*.git*' '*.vscode*' '*.sass-cache*' *node_modules/\\*",
     "validate": "gscan ./asgar.zip -z",
     "copy-fonts": "cp -a ./node_modules/@fortawesome/fontawesome-free/webfonts/. ./source/fonts",
     "build-vendor": "parcel build ./source/scss/vendor.scss --no-source-maps --dist-dir ./assets/css --public-url /assets/fonts/",
