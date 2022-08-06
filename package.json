@@ -59,11 +59,11 @@
     "zip": "zip -r9 asgar.zip . -x '*source*' '*.cache*' '*.git*' '*.vscode*' '*.sass-cache*' *node_modules/\\*",
     "validate": "gscan ./asgar.zip -z",
     "copy-fonts": "cp -a ./node_modules/@fortawesome/fontawesome-free/webfonts/. ./source/fonts",
-    "build-vendor": "parcel build ./source/scss/vendor.scss --no-source-maps -d ./assets/css --public-url /assets/fonts/",
+    "build-vendor": "parcel build ./source/scss/vendor.scss --no-source-maps --dist-dir ./assets/css --public-url /assets/fonts/",
     "cleanup-fonts": "rm -rf ./assets/fonts/* ./source/fonts && cp -r ./assets/css/fa-* ./assets/fonts && rm -rf ./assets/css/fa-*",
     "css-vendor": "yarn copy-fonts && yarn build-vendor && yarn cleanup-fonts",
-    "css-index": "parcel build ./source/scss/index.scss --no-source-maps -d ./assets/css",
-    "js": "parcel build ./source/js/index.js --no-source-maps -d ./assets/js",
+    "css-index": "parcel build ./source/scss/index.scss --no-source-maps --dist-dir ./assets/css",
+    "js": "parcel build ./source/js/index.js --no-source-maps --dist-dir ./assets/js",
     "prod": "yarn clean && yarn folders && yarn css-vendor && yarn css-index && yarn js",
     "deploy": "yarn prod && yarn zip && yarn validate"
   },
@@ -73,6 +73,7 @@
     "skeleton.css": "^2.0.4"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "2.7.0",
     "gscan": "^4.34.0",
     "parcel": "^2.7.0",
     "sass": "^1.54.3"
