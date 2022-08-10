@@ -75,7 +75,7 @@
     "@parcel/transformer-sass": "2.7.0",
     "gscan": "^4.34.0",
     "parcel": "^2.7.0",
-    "sass": "^1.54.3"
+    "sass": "^1.54.4"
   },
   "config": {
     "posts_per_page": 5,
