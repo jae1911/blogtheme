@@ -724,6 +724,15 @@
     "@parcel/utils" "2.7.0"
     react-refresh "^0.9.0"
 
+"@parcel/transformer-sass@2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-sass/-/transformer-sass-2.7.0.tgz#651b7a88bbc1ef452ace90ccb0883c1ad8cff721"
+  integrity sha512-6m2T6Y5eQLX7ckIeuOjXXIZbzhyovnl69AvJ2FujoWb2nA55H/kg6ZdbKjo3CfXkOfg9LyG3nVnOE5PMgMpRFQ==
+  dependencies:
+    "@parcel/plugin" "2.7.0"
+    "@parcel/source-map" "^2.0.0"
+    sass "^1.38.0"
+
 "@parcel/transformer-svg@2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@parcel/transformer-svg/-/transformer-svg-2.7.0.tgz#c2a7d10bdbc6aeb2ae7ef85db5b583574807071c"
@@ -3218,6 +3227,15 @@ safe-json-stringify@~1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
 
+sass@^1.38.0:
+  version "1.54.4"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.4.tgz#803ff2fef5525f1dd01670c3915b4b68b6cba72d"
+  integrity sha512-3tmF16yvnBwtlPrNBHw/H907j8MlOX8aTBnlNX1yrKx24RKcJGPyLhFUwkoKBKesR3unP93/2z14Ll8NicwQUA==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
 sass@^1.54.3:
   version "1.54.3"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.3.tgz#37baa2652f7f1fdadb73240ee9a2b9b81fabb5c4"
@@ -3534,9 +3552,9 @@ uglify-js@^3.1.4:
     source-map "~0.6.1"
 
 undici@^5.1.1:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-5.8.0.tgz#dec9a8ccd90e5a1d81d43c0eab6503146d649a4f"
-  integrity sha512-1F7Vtcez5w/LwH2G2tGnFIihuWUlc58YidwLiCv+jR2Z50x0tNXpRRw7eOIJ+GvqCqIkg9SB7NWAJ/T9TLfv8Q==
+  version "5.9.1"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-5.9.1.tgz#fc9fd85dd488f965f153314a63d9426a11f3360b"
+  integrity sha512-6fB3a+SNnWEm4CJbgo0/CWR8RGcOCQP68SF4X0mxtYTq2VNN8T88NYrWVBAeSX+zb7bny2dx2iYhP3XHi00omg==
 
 universalify@^1.0.0:
   version "1.0.0"
